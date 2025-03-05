@@ -1,0 +1,10 @@
+package com.example.util;
+
+import org.junit.jupiter.api.Test;
+
+public class PersonaTest {
+	@Test
+	void test() {
+		var p = new Persona(1, "Pepe");
+	}
+}

@@ -1,0 +1,13 @@
+package com.example.util;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Test;
+
+public class PersonaTest {
+	@Test
+	void test() {
+		var p = new Persona(1, "Pepe");
+		assertNotNull(p);
+	}
+}

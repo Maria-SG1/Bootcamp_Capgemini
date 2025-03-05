@@ -1,0 +1,10 @@
+package com.example.ioc;
+
+public class RepositorioImpl {
+	public RepositorioImpl(Configuracion conf) {
+		
+	}
+	public void guardar() {
+		System.err.println("Guardado");
+	}
+}

@@ -1,0 +1,11 @@
+package com.example.util;
+
+public class Calculadora {
+	public double suma(double x, double y) {
+		return x+y;
+	}
+	
+	public int suma(int x, int y) {
+		return x+y;
+	}
+}

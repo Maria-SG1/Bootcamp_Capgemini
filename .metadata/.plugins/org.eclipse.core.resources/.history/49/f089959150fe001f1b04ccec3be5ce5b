@@ -1,0 +1,12 @@
+package com.example.util;
+
+public class Persona {
+	public int id = 1;
+	public String nombre = "Pepe";
+	public String apellido = "Pepes";
+
+	public Persona(int id, String nombre) {
+		
+	}
+
+}
