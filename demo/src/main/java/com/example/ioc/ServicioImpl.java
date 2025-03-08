@@ -16,6 +16,11 @@ public class ServicioImpl implements Servicio {
 //		this.repositorio=repo;
 //	}
 	
+	
+//	public ServicioImpl(@Qualifier("verdadero") Repositorio repo) {
+//		this.repositorio=repo;
+//	}
+	
 	@Override
 	public void guardar() {
 		repositorio.guardar();

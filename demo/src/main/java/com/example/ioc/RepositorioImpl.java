@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
-//@Repository
+@Repository
 //@Qualifier("verdadero")
-//@Primary
+@Primary
 public class RepositorioImpl implements Repositorio {
 //	private Configuracion config;
 //	private Registro registro;

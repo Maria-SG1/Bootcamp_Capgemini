@@ -31,14 +31,14 @@ public class DemoApplication implements CommandLineRunner{
 	//@Qualifier("falso")
 	//Repositorio repo2;
 	
-	//@Autowired  		
-	//Repositorio repo;
-		
-	@Autowired  	@Qualifier("repo1")   
-	Repositorio repo1;
-	
-	@Autowired  	@Qualifier("repo2")
-	Repositorio repo2;
+	@Autowired  		
+	Repositorio repo;
+//		
+//	@Autowired  	@Qualifier("repo1")   
+//	Repositorio repo1;
+//	
+//	@Autowired  	@Qualifier("repo2")
+//	Repositorio repo2;
 	
 	@Value("${mi.valor:valor por defecto}")
 	String valor;
@@ -54,9 +54,9 @@ public class DemoApplication implements CommandLineRunner{
 		//AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 		
 		//srv.guardar();
-		//repo.guardar();
-		repo1.guardar();
-		repo2.guardar();
+		repo.guardar();
+//		repo1.guardar();
+//		repo2.guardar();
 				
 		System.err.println("Valor = "+valor);		
 		System.err.println("Rango = "+rango);
