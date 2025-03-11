@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import com.example.ioc.Rango;
 import com.example.ioc.Repositorio;
 import com.example.ioc.Servicio;
-import com.example.util.Calculadora;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner{
@@ -49,15 +48,25 @@ public class DemoApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.err.println("Applicación arrancada");		
-		ejemplosDePrueba();
+		System.err.println("Applicación arrancada");
+		// I
+		//Servicio srv = new ServicioImpl(new RepositorioImpl(new Configuracion()));		
+		//AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+		
+		//srv.guardar();
+		//repo.guardar();
+		repo1.guardar();
+		repo2.guardar();
+				
+		System.err.println("Valor = "+valor);		
+		System.err.println("Rango = "+rango);
 	}
 	
-	private void ejemplosDePrueba() {
-//		var calc = new Calculadora();
-//		System.err.println("Suma = " + calc.suma(2,3)); 
+	@Bean
+	public CommandLineRunner demo() {
+		return (args)->{
+			System.err.println("Applicación arrancada desde Bean");
+		};
 	}
-	
-
 
 }
