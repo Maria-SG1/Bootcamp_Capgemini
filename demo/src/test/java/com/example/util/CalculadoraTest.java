@@ -20,6 +20,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import com.example.test.utils.Smoke;
+
 
 class CalculadoraTest {
 
@@ -51,7 +53,7 @@ class CalculadoraTest {
 			@Test
 			@DisplayName("Suma 2 enteros")
 //			@Tag("Smoke")
-//			@Smoke
+			@Smoke
 			void testSuma() {
 //				var calc = new Calculadora();
 				var actual = calc.suma(2, 3);
