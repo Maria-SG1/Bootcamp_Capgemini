@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Bootcamp_Capgemini
 =======
-Inicio _
+Inicio __
 >>>>>>> d2c83d9 (Readme.md)
+=======
+Inicio
+>>>>>>> master
