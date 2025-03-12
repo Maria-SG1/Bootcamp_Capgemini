@@ -19,33 +19,6 @@ public class DemoApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	
-	// II
-	@Autowired  //(required=false)	
-	Servicio srv;
-	
-	//@Autowired  
-	//@Qualifier("verdadero")	
-	//Repositorio repo1;
-	
-	//@Autowired  	
-	//@Qualifier("falso")
-	//Repositorio repo2;
-	
-	//@Autowired  		
-	//Repositorio repo;
-		
-	@Autowired  	@Qualifier("repo1")   
-	Repositorio repo1;
-	
-	@Autowired  	@Qualifier("repo2")
-	Repositorio repo2;
-	
-	@Value("${mi.valor:valor por defecto}")
-	String valor;
-	
-	@Autowired
-	Rango rango;
 
 	@Override
 	public void run(String... args) throws Exception {

@@ -8,181 +8,94 @@ import org.approvaltests.Approvals;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-class GildedRoseTest {
-
-    @Test
-    void foo() {
-        Item[] items = new Item[] { new Item("foo", 0, 0) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals("foo, -1, 0", app.items[0].toString());
-//        assertAll("Producto",
-//        		()->assertEquals("foo", items[0].name),
-//        		()->assertEquals(-1, items[0].sellIn, "SellIn"),
-//        		()->assertEquals(0, items[0].quality, "Quality")
-//        		);
-    }    
-
-    
-    @Nested
-	@DisplayName("Elixir of the Mongoose")
-    class Elixir {
-    	@Test
-        void decrementarQuality() {
-            Item[] items = new Item[] { new Item("Elixir of the Mongoose", 10, 30) };
-            GildedRose app = new GildedRose(items);
-            app.updateQuality();
-//            assertEquals(9, app.items[0].sellIn);
-//            assertEquals(29, app.items[0].quality);
-            assertEquals("Elixir of the Mongoose, 9, 29", app.items[0].toString());
-        }
-       
-        @Test
-        void qualityPositivo() {
-            Item[] items = new Item[] { new Item("Elixir of the Mongoose", 10, 0) };
-            GildedRose app = new GildedRose(items);
-            app.updateQuality();           
-            assertEquals("Elixir of the Mongoose, 9, 0", app.items[0].toString());
-        }
-    }
-    
-    @Nested
+class GildedRoseTest {	
+	
+	private void comparar(String resultado, Item[] items) {
+		GildedRose app = new GildedRose(items);
+		app.updateQuality();
+		assertEquals(resultado, app.items[0].toString());
+	}
+	
+	private Item[] nuevoProducto(String nombre, int sellIn, int quality) {
+		return new Item[] {new Item(nombre, sellIn, quality)};
+	}
+	
+	@Nested
+	@DisplayName("Elexir of the mongoose")
+	class Elixir {
+		@ParameterizedTest
+		@CsvSource({
+			"10, 30, Elixir of the Mongoose,  9, 29",
+			"10, 0, Elixir of the Mongoose, 9, 0"
+		})
+		void elexirTest(int sellIn, int quality, String nombre, int resultSellIn, int resultQuality) {
+			comparar(nombre+", "+resultSellIn+", "+ resultQuality, nuevoProducto(nombre, sellIn, quality));
+		}
+	}
+	
+	@Nested
 	@DisplayName("Aged Brie")
-    class AgedBrie {
-    	@Test
-        void max50AgedBrie() {
-            Item[] items = new Item[] { new Item("Aged Brie", 10, 50) };  
-            GildedRose app = new GildedRose(items);
-            app.updateQuality();
-            assertEquals("Aged Brie, 9, 50", app.items[0].toString());
-        }
-        
-        @Test
-        void agedBrieIncrementar() {
-            Item[] items = new Item[] { new Item("Aged Brie", 2, 0) };
-            GildedRose app = new GildedRose(items);
-            app.updateQuality();
-            assertEquals("Aged Brie, 1, 1", app.items[0].toString());
-        }
-        
-        @Test
-        void agedBrieExpiradaFechaAumentarDoble() {
-            Item[] items = new Item[] { new Item("Aged Brie", -1, 40) };
-            GildedRose app = new GildedRose(items);
-            app.updateQuality();
-            assertEquals("Aged Brie, -2, 42", app.items[0].toString());
-        }
-        
-        @Test
-        void agedBrieexpiradaFechaQuality50() {
-            Item[] items = new Item[] { new Item("Aged Brie", -1, 50) };
-            GildedRose app = new GildedRose(items);
-            app.updateQuality();
-            assertEquals("Aged Brie, -2, 50", app.items[0].toString());
-        }
-    }   
-    
-    @Nested
-   	@DisplayName("Backstage")
-       class Backstage { 
-		   
-		    @Test
-		    @DisplayName("SellIn < 11, Quality < 50")
-		    void incrementar2() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 9, 40) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();		       
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, 8, 42", app.items[0].toString());
-		    }
-		    
-		    @Test
-		    @DisplayName("SellIn >= 11, Quality < 50")
-		    void incrementar2sell11() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 11, 40) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, 10, 41", app.items[0].toString());
-		    }
-		    
-		    @Test
-		    @DisplayName("SellIn < 11, Quality = 50")
-		    void incrementar250() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 10, 50) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, 9, 50", app.items[0].toString());
-		    }
-		    
-		    @Test
-		    @DisplayName("SellIn >= 11, Quality = 50")
-		    void incrementar21150() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 11, 50) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, 10, 50", app.items[0].toString());
-		    }
-		   
-		    @Test
-		    @DisplayName("SellIn < 6, Quality < 50")
-		    void incrementar3() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 4, 40) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, 3, 43", app.items[0].toString());
-		    }
-		    
-		    @Test
-		    @DisplayName("SellIn < 6, Quality = 50")
-		    void incrementar350() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 4, 50) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, 3, 50", app.items[0].toString());
-		    }    
-		    
-		    @Test
-		    void perderCalidad() {
-		        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 0, 40) };
-		        GildedRose app = new GildedRose(items);
-		        app.updateQuality();
-		        assertEquals("Backstage passes to a TAFKAL80ETC concert, -1, 0", app.items[0].toString());
-		    }  
-    
-    }
-    
-    @Test
-    void otroProducto() {
-        Item[] items = new Item[] { new Item("+5 Dexterity Vest", -1, 10) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals("+5 Dexterity Vest, -2, 8", app.items[0].toString());
-    }
-    
-    @Test
-    void sulfuras() {
-        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", -1, 80) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals("Sulfuras, Hand of Ragnaros, -1, 80", app.items[0].toString());
-    }
-    
-    @Test
-    void conjured() {
-    	Item[] items = new Item[] { new Item("Conjured Mana Cake", 3, 10) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals("Conjured Mana Cake, 2, 8", app.items[0].toString());
-    }
-    
-    @Test
-    void conjured1() {
-    	Item[] items = new Item[] { new Item("Conjured Mana Cake", -1, 10) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertEquals(-2, app.items[0].sellIn);
-        assertEquals(6, app.items[0].quality);
-    }
+	class AgedBrie {
+		@ParameterizedTest
+		@CsvSource({
+			"10, 50, Aged Brie,  9, 50",
+			"2, 0, Aged Brie, 1, 1",
+			"-1, 40, Aged Brie, -2, 42",
+			"-1, 50, Aged Brie, -2, 50",			
+		})
+		void elexirTest(int sellIn, int quality, String nombre, int resultSellIn, int resultQuality) {
+			comparar(nombre+", "+resultSellIn+", "+ resultQuality, nuevoProducto(nombre, sellIn, quality));
+		}
+	}
+	
+	@Nested
+	@DisplayName("Backstage passes to a TAFKAL80ETC concert")
+	class Backstage {
+		@ParameterizedTest
+		@CsvSource({
+			"9, 40, Backstage passes to a TAFKAL80ETC concert,  8, 42",
+			"11, 40, Backstage passes to a TAFKAL80ETC concert, 10, 41",
+			"10, 50, Backstage passes to a TAFKAL80ETC concert, 9, 50",
+			"4, 40, Backstage passes to a TAFKAL80ETC concert, 3, 43",
+			"0, 40, Backstage passes to a TAFKAL80ETC concert, -1, 0"
+		})
+		void elexirTest(int sellIn, int quality, String nombre, int resultSellIn, int resultQuality) {
+			comparar(nombre+", "+resultSellIn+", "+ resultQuality, nuevoProducto(nombre, sellIn, quality));
+		}
+	}
+	
+	@Nested
+	@DisplayName("Conjured Mana Cake")
+	class Conjured {
+		@ParameterizedTest
+		@CsvSource({
+			"3, 10, Conjured Mana Cake,  2, 8",
+			"-1, 10, Conjured Mana Cake, -2, 6",
+			"3, 1, Conjured Mana Cake, 2, 0"			
+		})
+		void elexirTest(int sellIn, int quality, String nombre, int resultSellIn, int resultQuality) {
+			comparar(nombre+", "+resultSellIn+", "+ resultQuality, nuevoProducto(nombre, sellIn, quality));
+		}
+	}
+	
+	@Nested
+	@DisplayName("Otros productos")
+	class Otros {
+		@ParameterizedTest
+		@CsvSource({
+			"-1, 10, +5 Dexterity Vest,  -2, 8",
+			"-1, 80, 'Sulfuras, Hand of Ragnaros', -1, 80",
+			"5, 80, 'Sulfuras, Hand of Ragnaros', 5, 80",
+			"5, 60, 'Sulfuras, Hand of Ragnaros', 5, 60"
+		})
+		void elexirTest(int sellIn, int quality, String nombre, int resultSellIn, int resultQuality) {
+			comparar(nombre+", "+resultSellIn+", "+ resultQuality, nuevoProducto(nombre, sellIn, quality));
+		}
+	}
+
     
     /* Utilizando Approvals.verify */
     
@@ -212,6 +125,7 @@ class GildedRoseTest {
 				output.append(i + "," + item + "\n");
 		}
 		Approvals.verify(output);
-	}
+	}   
+    
 
 }

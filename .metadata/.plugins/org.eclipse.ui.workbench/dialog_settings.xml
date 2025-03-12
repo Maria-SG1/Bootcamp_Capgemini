@@ -31,8 +31,8 @@
 		</section>
 	</section>
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="588"/>
-		<item key="DIALOG_Y_ORIGIN" value="37"/>
+		<item key="DIALOG_X_ORIGIN" value="-168"/>
+		<item key="DIALOG_Y_ORIGIN" value="-25"/>
 		<item key="DIALOG_WIDTH" value="931"/>
 		<item key="DIALOG_HEIGHT" value="1102"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -41,6 +41,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Teoria\demo2.zip"/>
 			<item value="C:\Teoria\GRose1.zip"/>
 			<item value="C:\Teoria\GRose.zip"/>
 		</list>
