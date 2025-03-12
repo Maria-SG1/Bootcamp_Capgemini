@@ -168,13 +168,14 @@ class CalculadoraTest {
 		void suplanta2() {
 			var calc = mock(Calculadora.class);
 			when(calc.suma(anyInt(), anyInt())).thenReturn(4);
-			var cl = mock(CalculadoraInt.class);
+			var cl = mock(RepositoryInt.class);  // clase que impl. interface
 			doNothing().when(cl).guardar();
 			var obj = new Factura(calc, cl);
 			var actual = obj.calcTotal(2, 2);
 			obj.emitir();
 //			assertEquals(4, actual);
 //			verify(calc).suma(2, 2);
+			verify(cl).guardar();
 		}
 //		@Test
 //		void Integracion() {

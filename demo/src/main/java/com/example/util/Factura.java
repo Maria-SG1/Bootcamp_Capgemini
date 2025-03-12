@@ -2,14 +2,12 @@ package com.example.util;
 
 public class Factura {
 	Calculadora calc;
-
-		CalculadoraInt calculadora;
+	RepositoryInt r;	
 	
-	
-	public Factura(Calculadora calc, CalculadoraInt c) {
+	public Factura(Calculadora calc, RepositoryInt r) {
 		super();
 		this.calc = calc;
-		this.calculadora=c;
+		this.r=r;
 	}
 	
 	public double calcTotal(int cantidad, double precio) {
@@ -17,6 +15,6 @@ public class Factura {
 	}
 	
 	public void emitir() {
-		calculadora.guardar();
+		r.guardar();
 	}
 }

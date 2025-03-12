@@ -1,5 +1,5 @@
 package com.example.util;
 
-public interface CalculadoraInt {
+public interface RepositoryInt {
 	void guardar();	
 }
