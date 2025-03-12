@@ -3006,3 +3006,68 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.approvalt
 2025-03-11 23:21:40,511 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
 2025-03-11 23:22:15,053 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-03-11 23:22:15,057 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:29:24,156 [Worker-35: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.gildedrose:gilded-rose-kata:0.0.1-SNAPSHOT @ C:\curso\Git\Java\pom.xml.
+2025-03-11 23:29:24,343 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:29:24,347 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:29:33,082 [Worker-35: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-11 23:29:33,133 [Worker-35: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.gildedrose:gilded-rose-kata:0.0.1-SNAPSHOT @ C:\curso\Git\Java\pom.xml.
+2025-03-11 23:29:33,240 [Worker-35: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Java/src/main/java
+2025-03-11 23:29:33,241 [Worker-35: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Java/src/main/resources
+2025-03-11 23:29:33,241 [Worker-35: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Java/src/test/java
+2025-03-11 23:29:33,241 [Worker-35: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Java/src/test/resources
+2025-03-11 23:29:33,284 [Worker-35: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: GildedRoseTest
+2025-03-11 23:29:33,284 [Worker-35: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating GildedRoseTest from maven configuration
+2025-03-11 23:29:33,352 [Worker-35: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-03-11 23:29:33,638 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:29:33,641 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:29:46,740 [Worker-35: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.gildedrose:gilded-rose-kata:0.0.1-SNAPSHOT @ C:\curso\Git\Java\pom.xml.
+2025-03-11 23:29:47,008 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:29:47,012 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:29:54,748 [Worker-33: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-11 23:29:54,803 [Worker-33: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.gildedrose:gilded-rose-kata:0.0.1-SNAPSHOT @ C:\curso\Git\Java\pom.xml.
+2025-03-11 23:29:54,906 [Worker-33: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Java/src/main/java
+2025-03-11 23:29:54,907 [Worker-33: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Java/src/main/resources
+2025-03-11 23:29:54,907 [Worker-33: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Java/src/test/java
+2025-03-11 23:29:54,907 [Worker-33: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Java/src/test/resources
+2025-03-11 23:29:54,950 [Worker-33: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: GildedRoseTest
+2025-03-11 23:29:54,950 [Worker-33: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating GildedRoseTest from maven configuration
+2025-03-11 23:29:55,006 [Worker-33: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-03-11 23:29:55,313 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:29:55,316 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:33:02,463 [Worker-40: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-11 23:33:02,571 [Worker-40: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.gildedrose:gilded-rose-kata:0.0.1-SNAPSHOT @ C:\curso\Git\Java\pom.xml.
+2025-03-11 23:33:03,127 [Worker-40: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Java/src/main/java
+2025-03-11 23:33:03,128 [Worker-40: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Java/src/main/resources
+2025-03-11 23:33:03,129 [Worker-40: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Java/src/test/java
+2025-03-11 23:33:03,131 [Worker-40: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Java/src/test/resources
+2025-03-11 23:33:03,206 [Worker-40: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: GildedRoseTest
+2025-03-11 23:33:03,206 [Worker-40: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating GildedRoseTest from maven configuration
+2025-03-11 23:33:03,294 [Worker-40: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-03-11 23:33:03,585 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:33:03,590 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:35:48,359 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:35:48,362 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:35:58,916 [Worker-43: Building Project Java] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:35:58,920 [Worker-43: Building Project Java] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-11 23:36:00,199 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-11 23:36:00,203 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-12 07:52:26,673 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-12 07:53:18,405 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-12 07:53:19,971 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:demo:0.0.1-SNAPSHOT @ C:\curso\Git\demo\pom.xml.
+2025-03-12 07:53:21,159 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /demo/src/main/java
+2025-03-12 07:53:21,161 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /demo/src/main/resources
+2025-03-12 07:53:21,162 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /demo/src/main/resources
+2025-03-12 07:53:21,169 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /demo/src/test/java
+2025-03-12 07:53:21,170 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /demo/src/test/resources
+2025-03-12 07:53:21,440 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: CalculadoraTest
+2025-03-12 07:53:21,440 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating CalculadoraTest from maven configuration
+2025-03-12 07:53:22,181 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: demo
+2025-03-12 07:53:22,181 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating demo from maven configuration
+2025-03-12 07:53:22,183 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: java
+2025-03-12 07:53:22,184 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating java from maven configuration
+2025-03-12 07:53:22,187 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Reset launch configuration name: PersonaTest
+2025-03-12 07:53:22,187 [Worker-6: Updating Maven Project] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating PersonaTest from maven configuration
+2025-03-12 07:53:22,817 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 2,00 sec, update config takes 1,00 sec 
+2025-03-12 07:53:23,615 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-12 07:53:23,636 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-12 07:53:23,642 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\curso\Git\demo\src\test\resources
