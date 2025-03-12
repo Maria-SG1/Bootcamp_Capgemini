@@ -5626,3 +5626,538 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 20:01:31.160
 !MESSAGE Boot project REMOVED: demo2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 22:42:01.618
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.eclipse.jdt.core 2 0 2025-03-11 22:42:02.078
+!MESSAGE Java Index broken - will be automatically deleted to repair: file:/C:/curso/Git/.metadata/.plugins/org.eclipse.jdt.core/3316466471.index
+!STACK 0
+java.io.UTFDataFormatException: Failed to read index data from file:/C:/curso/Git/.metadata/.plugins/org.eclipse.jdt.core/3316466471.index at offset 248 and size 1702065253
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:693)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:488)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:480)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:581)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:229)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1133)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1176)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:820)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:508)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.eclipse.jdt.internal.compiler.util.HashtableOfObject.<init>(HashtableOfObject.java:56)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:689)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:488)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:480)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:581)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:229)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1133)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1176)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:820)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:508)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager$$Lambda/0x0000018c0182f618.run(Unknown Source)
+	at java.base/java.lang.Thread.runWith(Thread.java:1596)
+	... 1 more
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-03-11 22:42:02.084
+!MESSAGE Failed to save JDT index: Index for /Java
+!STACK 0
+java.io.FileNotFoundException: C:\curso\Git\.metadata\.plugins\org.eclipse.jdt.core\3316466471.index (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at org.eclipse.jdt.internal.core.index.FileIndexLocation.getInputStream(FileIndexLocation.java:83)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:683)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:488)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:480)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:581)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:229)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1133)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1176)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:820)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:508)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.eclipse.jdt.core 2 0 2025-03-11 22:42:02.087
+!MESSAGE Java Index broken - will be automatically deleted to repair: file:/C:/curso/Git/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:996)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:768)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:535)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:229)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:98)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1201)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:820)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:508)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 22:42:03.095
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-03-11 23:02:26.880
+!MESSAGE Failed to save JDT index: Index for /Java
+!STACK 0
+java.io.FileNotFoundException: C:\curso\Git\.metadata\.plugins\org.eclipse.jdt.core\3316466471.index (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at org.eclipse.jdt.internal.core.index.FileIndexLocation.getInputStream(FileIndexLocation.java:83)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:632)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:535)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:229)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1133)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1176)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:820)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:508)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+!SESSION 2025-03-11 23:10:50.293 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data C:\curso\Git
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-11 23:10:54.476
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-11 23:10:56.268
+!MESSAGE Logback config file: C:\curso\Git\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-11 23:10:56.689
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-11 23:10:56.689
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-11 23:10:57.025
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-11 23:10:57.025
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-11 23:11:01.234
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\curso\apps\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/curso/Git/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1741731061232
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\curso\apps\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.springframework.tooling.boot.ls_1.60.0.202502031607\servers\spring-boot-language-server\spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:11:01.235
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-11 23:11:01.289
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 18628
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-11 23:11:03.636
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mgoleman'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:11:03.767
+!MESSAGE Classpath changed for project: demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:11:03.768
+!MESSAGE Classpath changed for project: demo2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:14:00.594
+!MESSAGE Classpath changed for project: Catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:14:00.596
+!MESSAGE Boot project ADDED: Catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:14:00.597
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:14:00.599
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:15:16.651
+!MESSAGE Classpath changed for project: Java
+!SESSION 2025-03-11 23:16:36.449 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-11 23:16:39.611
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-11 23:17:08.859
+!MESSAGE Logback config file: C:\curso\Git\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-11 23:17:09.457
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-11 23:17:09.457
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-11 23:17:09.807
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-11 23:17:09.807
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-11 23:17:15.897
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mgoleman'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:17:16.239
+!MESSAGE Boot project ADDED: Catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:17:16.240
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:17:16.275
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-11 23:17:16.298
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\curso\apps\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/curso/Git/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1741731436296
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\curso\apps\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.springframework.tooling.boot.ls_1.60.0.202502031607\servers\spring-boot-language-server\spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:17:16.299
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-11 23:17:16.407
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 6616
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-11 23:18:47.853
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-11 23:18:47.855
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-11 23:18:47.858
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-11 23:18:47.860
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-11 23:18:47.871
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-11 23:18:47.877
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jface 2 0 2025-03-11 23:18:48.512
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-03-11 23:18:48.513
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:19:20.353
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:19:29.340
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.eclipse.debug.core 4 2 2025-03-11 23:21:49.770
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 120 2025-03-11 23:21:49.772
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 2 2025-03-11 23:22:06.019
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 120 2025-03-11 23:22:06.020
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:29:33.322
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:29:54.981
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.eclipse.debug.core 4 2 2025-03-11 23:30:14.075
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 120 2025-03-11 23:30:14.076
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-11 23:33:03.251
+!MESSAGE Classpath changed for project: Java
+
+!ENTRY org.eclipse.debug.core 4 2 2025-03-11 23:36:07.188
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.core 4 120 2025-03-11 23:36:07.188
+!MESSAGE An exception occurred during launch change notification.
+!STACK 0
+java.lang.ClassCastException: class org.eclipse.eclemma.core.launching.JavaApplicationLauncher cannot be cast to class org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate (org.eclipse.eclemma.core.launching.JavaApplicationLauncher is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @439cfa84; org.eclipse.jdt.junit.launcher.JUnitLaunchConfigurationDelegate is in unnamed module of loader org.eclipse.osgi.internal.loader.EquinoxClassLoader @3317063)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchAdded(TestJarLaunchListener.java:117)
+	at org.springframework.ide.eclipse.boot.launch.TestJarLaunchListener.launchesAdded(TestJarLaunchListener.java:185)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:268)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.internal.core.LaunchManager.addLaunch(LaunchManager.java:690)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:735)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:688)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-03-12 07:52:04.346 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-12 07:52:09.567
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-12 07:52:16.119
+!MESSAGE Logback config file: C:\curso\Git\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-03-12 07:52:16.651
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-12 07:52:16.651
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-03-12 07:52:16.994
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-03-12 07:52:16.994
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-12 07:52:23.177
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\curso\apps\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/curso/Git/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1741762343176
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\curso\apps\eclipse-jee-2024-12-R-win32-x86_64\eclipse\plugins\org.springframework.tooling.boot.ls_1.60.0.202502031607\servers\spring-boot-language-server\spring-boot-language-server-1.60.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:52:23.180
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-03-12 07:52:23.462
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 12108
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-03-12 07:52:26.690
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mgoleman'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:52:26.797
+!MESSAGE Boot project ADDED: Catalogo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:52:26.799
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:52:26.801
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:53:21.542
+!MESSAGE Classpath changed for project: demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:53:21.544
+!MESSAGE Boot project ADDED: demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-12 07:53:22.578
+!MESSAGE Classpath changed for project: demo
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:07:55.734
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:07:55.741
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:07:55.745
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:07:55.748
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:07:55.765
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:07:55.775
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jface 2 0 2025-03-12 08:07:56.215
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-03-12 08:07:56.215
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:08:25.398
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:08:25.399
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:08:25.401
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:08:25.402
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:08:25.409
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-03-12 08:08:25.413
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
