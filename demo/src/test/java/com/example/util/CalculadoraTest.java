@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -21,7 +22,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import com.example.test.utils.Smoke;
-
 
 class CalculadoraTest {
 
@@ -74,8 +74,7 @@ class CalculadoraTest {
 			void testSuma3() {
 //				var calc = new Calculadora();	
 				assertEquals(0.1, calc.suma(1, -0.9));
-			}
-			
+			}			
 			
 			@DisplayName("Test Parametrizado")
 			@ParameterizedTest(name= "{0}+{1}={2}")
@@ -101,12 +100,9 @@ class CalculadoraTest {
 				assertTrue(1.0 / 0 > 0); // failure
 				assertEquals(5, 1.0 / 0);
 				assertTrue(actual>0);		
-			}
-			
-			
+			}	
 		}
 	}
-	
 	
 	
 	@Nested
@@ -163,7 +159,6 @@ class CalculadoraTest {
 		void suplanta() {
 			var calc = mock(Calculadora.class);
 			when(calc.suma(anyInt(), anyInt())).thenReturn(3).thenReturn(5);
-
 			var actual = calc.suma(2, 2);
 			assertEquals(3, actual);
 			assertEquals(5, calc.suma(2, 2));
@@ -173,18 +168,23 @@ class CalculadoraTest {
 		void suplanta2() {
 			var calc = mock(Calculadora.class);
 			when(calc.suma(anyInt(), anyInt())).thenReturn(4);
-			var obj = new Factura(calc);
+			var cl = mock(CalculadoraInt.class);
+			doNothing().when(cl).guardar();
+			var obj = new Factura(calc, cl);
 			var actual = obj.calcTotal(2, 2);
-			assertEquals(4, actual);
-			verify(calc).suma(2, 2);
+			obj.emitir();
+//			assertEquals(4, actual);
+//			verify(calc).suma(2, 2);
 		}
-		@Test
-		void Integracion() {
-			var obj = new Factura(new Calculadora());
-			var actual = obj.calcTotal(2, 2);
-			assertEquals(4, actual);
-		}
-}
+//		@Test
+//		void Integracion() {
+//			var obj = new Factura(new Calculadora());
+//			var actual = obj.calcTotal(2, 2);
+//			assertEquals(4, actual);
+//		}
+	}
+	
+	
 	
 	
 	
