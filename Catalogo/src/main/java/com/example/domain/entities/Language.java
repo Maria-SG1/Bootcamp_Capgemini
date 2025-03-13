@@ -3,6 +3,7 @@ package com.example.domain.entities;
 import java.io.Serializable;
 import jakarta.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -38,6 +39,8 @@ public class Language implements Serializable {
 	public Language(int languageId) {
 		super();
 		this.languageId = languageId;
+		this.films2 = new ArrayList<>();
+		this.filmsVO = new ArrayList<>();
 	}
 
 	public int getLanguageId() {

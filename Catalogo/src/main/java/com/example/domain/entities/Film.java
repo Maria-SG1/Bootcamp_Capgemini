@@ -4,6 +4,7 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -75,12 +76,16 @@ public class Film implements Serializable {
 	public Film(int filmId) {
 		super();
 		this.filmId = filmId;
+		this.filmActors = new ArrayList<>();
+		this.filmCategories = new ArrayList<>();
 	}
 
 	public Film(int filmId, String title) {
 		super();
 		this.filmId = filmId;
 		this.title = title;
+		this.filmActors = new ArrayList<>();
+		this.filmCategories = new ArrayList<>();
 	}
 
 	public int getFilmId() {

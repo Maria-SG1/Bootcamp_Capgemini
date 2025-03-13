@@ -3,6 +3,7 @@ package com.example.domain.entities;
 import java.io.Serializable;
 import jakarta.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,12 +39,14 @@ public class Category implements Serializable {
 	public Category(int categoryId) {
 		super();
 		this.categoryId = categoryId;
+		this.filmCategories = new ArrayList<>();
 	}
 
 	public Category(int categoryId, String name) {
 		super();
 		this.categoryId = categoryId;
 		this.name = name;
+		this.filmCategories = new ArrayList<>();
 	}
 
 	public int getCategoryId() {

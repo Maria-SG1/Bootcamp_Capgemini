@@ -53,23 +53,25 @@ public class ActorServiceImpl implements ActorService {
 			a.setFirstName(item.getFirstName());
 			a.setLastName(item.getLastName());
 			a.setLastUpdate(item.getLastUpdate());
-			dao.save(a);
+			return dao.save(a);
 		} else {
 			throw new ItemNotFoundException("No existe actor con este ID.");
-		}
+		}	
 		
-		return null;
 	}
 
 	@Override
 	public void delete(Actor item) throws InvalidDataException {
-		// TODO Auto-generated method stub
+		if (item == null) {
+			throw new InvalidDataException("No puede ser nulo.");
+		}
+		dao.delete(item);
 		
 	}
 	
 	@Override
-	public void deleteById(Integer id) {
-		// TODO Auto-generated method stub
+	public void deleteById(Integer id) {		
+		dao.deleteById(id);
 
 	}
 
