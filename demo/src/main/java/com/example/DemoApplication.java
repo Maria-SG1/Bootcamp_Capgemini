@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.domain.Sort;
 
 import com.example.domain.contracts.repositories.ActoresRepository;
-import com.example.domain.entities.Actor;
+import com.example.domain.contracts.services.ActorService;
+
+import jakarta.transaction.Transactional;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner{
@@ -17,6 +19,7 @@ public class DemoApplication implements CommandLineRunner{
 	}
 
 	@Override
+	@Transactional
 	public void run(String... args) throws Exception {
 		System.err.println("Applicación arrancada");		
 		ejemplosDePrueba();
@@ -24,6 +27,9 @@ public class DemoApplication implements CommandLineRunner{
 	
 	@Autowired
 	private ActoresRepository dao;	
+	
+	@Autowired
+	private ActorService srv;	
 	
 	private void ejemplosDePrueba() {
 //		var actor = new Actor(0, "Pepito", "Grillo");
@@ -43,16 +49,25 @@ public class DemoApplication implements CommandLineRunner{
 //		dao.deleteById(203);
 //		dao.findAll().forEach(System.err::println);
 		
-		dao.findTop10ByFirstNameStartingWithOrderByLastNameDesc("P").forEach(System.err::println);
-		dao.findTop10ByFirstNameStartingWith("P", Sort.by("FirstName").ascending()).forEach(System.err::println);
-		dao.findByActorIdGreaterThan(190).forEach(System.err::println);
-		dao.findNovedadesJPQL(195).forEach(System.err::println);
-		dao.findNovedadesSQL(185).forEach(System.err::println);
+//		dao.findTop10ByFirstNameStartingWithOrderByLastNameDesc("P").forEach(System.err::println);
+//		dao.findTop10ByFirstNameStartingWith("P", Sort.by("FirstName").ascending()).forEach(System.err::println);
+//		dao.findByActorIdGreaterThan(190).forEach(System.err::println);
+//		dao.findNovedadesJPQL(195).forEach(System.err::println);
+//		dao.findNovedadesSQL(185).forEach(System.err::println);
+//		
+//		dao.findAll((root, query, builder)->builder.greaterThan(root.get("actorId"),193)).forEach(System.err::println);
+//		dao.findAll((root, query, builder)->builder.lessThanOrEqualTo(root.get("actorId"),5)).forEach(System.err::println);
 		
-		dao.findAll((root, query, builder)->builder.greaterThan(root.get("actorId"),193)).forEach(System.err::println);
-		dao.findAll((root, query, builder)->builder.lessThanOrEqualTo(root.get("actorId"),5)).forEach(System.err::println);
+//		srv.getAll().forEach(System.err::println);
+		var item = srv.getOne(1);
 		
-	
+		if (item.isPresent()) {
+			var actor = item.get();
+			System.err.println(item+" \n in peliculas");
+			actor.getFilmActors().forEach(fa->System.err.println(fa.getFilm().getTitle()));
+		} else {
+			System.err.println("No encontrado");
+		}
 	}
 	
 

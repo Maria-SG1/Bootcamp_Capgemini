@@ -4,6 +4,7 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -32,6 +33,17 @@ public class Category implements Serializable {
 	private List<FilmCategory> filmCategories;
 
 	public Category() {
+	}	
+
+	public Category(int categoryId) {
+		super();
+		this.categoryId = categoryId;
+	}
+
+	public Category(int categoryId, String name) {
+		super();
+		this.categoryId = categoryId;
+		this.name = name;
 	}
 
 	public int getCategoryId() {
@@ -64,6 +76,28 @@ public class Category implements Serializable {
 
 	public void setFilmCategories(List<FilmCategory> filmCategories) {
 		this.filmCategories = filmCategories;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(categoryId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Category other = (Category) obj;
+		return categoryId == other.categoryId;
+	}	
+
+	@Override
+	public String toString() {
+		return "Category [categoryId=" + categoryId + ", lastUpdate=" + lastUpdate + ", name=" + name + "]";
 	}
 
 	public FilmCategory addFilmCategory(FilmCategory filmCategory) {
