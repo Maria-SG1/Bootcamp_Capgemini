@@ -1,17 +1,13 @@
 package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.data.domain.Sort;
 
-import com.example.ioc.Rango;
-import com.example.ioc.Repositorio;
-import com.example.ioc.Servicio;
-import com.example.util.Calculadora;
+import com.example.domain.contracts.repositories.ActoresRepository;
+import com.example.domain.entities.Actor;
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner{
@@ -26,9 +22,37 @@ public class DemoApplication implements CommandLineRunner{
 		ejemplosDePrueba();
 	}
 	
+	@Autowired
+	private ActoresRepository dao;	
+	
 	private void ejemplosDePrueba() {
-//		var calc = new Calculadora();
-//		System.err.println("Suma = " + calc.suma(2,3)); 
+//		var actor = new Actor(0, "Pepito", "Grillo");
+		
+//		var item = dao.findById(201);  // Optional
+//		if (item.isPresent()) {
+//			var actor = item.get();
+//			actor.setFirstName("Pepe");
+//			actor.setLastName(actor.getLastName().toUpperCase());
+//			dao.save(actor);
+//			//System.err.println("Actor: "+item);
+//		} else {
+//			System.err.println("No encontrado");
+//		}
+//		dao.findAll().forEach(System.err::println);
+//		dao.deleteById(202);
+//		dao.deleteById(203);
+//		dao.findAll().forEach(System.err::println);
+		
+		dao.findTop10ByFirstNameStartingWithOrderByLastNameDesc("P").forEach(System.err::println);
+		dao.findTop10ByFirstNameStartingWith("P", Sort.by("FirstName").ascending()).forEach(System.err::println);
+		dao.findByActorIdGreaterThan(190).forEach(System.err::println);
+		dao.findNovedadesJPQL(195).forEach(System.err::println);
+		dao.findNovedadesSQL(185).forEach(System.err::println);
+		
+		dao.findAll((root, query, builder)->builder.greaterThan(root.get("actorId"),193)).forEach(System.err::println);
+		dao.findAll((root, query, builder)->builder.lessThanOrEqualTo(root.get("actorId"),5)).forEach(System.err::println);
+		
+	
 	}
 	
 
