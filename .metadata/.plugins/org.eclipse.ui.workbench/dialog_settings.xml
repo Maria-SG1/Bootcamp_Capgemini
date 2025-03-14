@@ -41,6 +41,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Teoria\Catalogo.zip"/>
 			<item value="C:\Teoria\rose3.zip"/>
 			<item value="C:\Teoria\demo2.zip"/>
 			<item value="C:\Teoria\GRose1.zip"/>
