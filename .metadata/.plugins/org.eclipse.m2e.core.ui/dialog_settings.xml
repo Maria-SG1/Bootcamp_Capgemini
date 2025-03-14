@@ -64,6 +64,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\mgoleman\Downloads\Bootcamp_Capgemini-main\Bootcamp_Capgemini-main\Catalogo"/>
 			<item value="C:\curso\Git\Java"/>
 			<item value="C:\curso\Git"/>
 		</list>
