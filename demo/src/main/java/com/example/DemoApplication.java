@@ -66,7 +66,7 @@ public class DemoApplication implements CommandLineRunner{
 			System.err.println(item+" \n in peliculas");
 			actor.getFilmActors().forEach(fa->System.err.println(fa.getFilm().getTitle()));
 		} else {
-			System.err.println("No encontrado");
+			System.err.println("**No encontrado**");
 		}
 	}
 	
