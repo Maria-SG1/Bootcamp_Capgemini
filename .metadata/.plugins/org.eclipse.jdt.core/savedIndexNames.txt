@@ -1,6 +1,5 @@
 INDEX VERSION 1.134+C:\curso\Git\.metadata\.plugins\org.eclipse.jdt.core
 3937780278.index
-160919734.index
 2084667559.index
 1881644423.index
 2222859924.index
